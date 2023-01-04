@@ -6,9 +6,13 @@
  *
  */
 
-import {unstable_createRoot} from 'react-dom';
+import {createRoot} from 'react-dom';
 import Root from './Root.client';
 
 const initialCache = new Map();
-const root = unstable_createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(<Root initialCache={initialCache} />);
+
+// Note: in this example, the initial page is rendered on the client.
+// However, the intended solution (which isn't built out yet) is to
+// have the server send the initial HTML, and hydrate from it.

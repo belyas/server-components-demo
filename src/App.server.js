@@ -15,6 +15,8 @@ import SearchField from './SearchField.client';
 import NoteSkeleton from './NoteSkeleton';
 import NoteListSkeleton from './NoteListSkeleton';
 
+export someTestFn = () => console.log('do nothing');
+
 export default function App({selectedId, isEditing, searchText}) {
   return (
     <div className="main">
